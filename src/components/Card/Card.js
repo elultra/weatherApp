@@ -33,6 +33,7 @@ const Card = () =>{
                               <div className='flex'>
                                     <SocialMedia />
                                     <Forecast data={data}/>
+                                    <h2 className='text-yellow-200'>Hello World</h2>
                               </div>
                         )
                         }
