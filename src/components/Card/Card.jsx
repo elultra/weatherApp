@@ -13,8 +13,8 @@ const Card = () => {
             const getData = async () => {
                         isLoading(true);
                         const weatherData = await getWeathers();
-                        setData(weatherData.list)
-                        // data===[]? isLoading(false):setData(data);
+                        setData(weatherData.data);
+                        isLoading(false)
                   }
             getData();
       }, [])
@@ -28,7 +28,7 @@ const Card = () => {
                                     <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
                               </div>
                         ) : (
-                              <div className='flex justify-between bg-sky-600 rounded-b-xl backdrop-opacity-10 z-5'>
+                              <div className='flex justify-between bg-sky-600 rounded-b-xl backdrop-opacity-10 z-5 shadow-lg'>
                                     <SocialMedia />
                                     <Forecast data={data} />
                               </div>

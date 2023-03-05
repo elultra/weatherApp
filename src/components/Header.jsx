@@ -6,7 +6,7 @@ import weaths from "../images/weaths.png";
 const Header = () => {
 	return (
 		<>
-			<div className="bg-indigo-900 fixed w-full top-0 left-0 flex justify-between items-center px-[15px]">
+			<div className="bg-[#003366] fixed w-full top-0 left-0 flex justify-between items-center px-[15px]">
 				<div className="flex flex-1">
 					<BiMenu className="text-[35px] mr-[20px] align-middle text-white" />
 					<img src={weaths} alt="logo" className="h-16 w-auto" />
