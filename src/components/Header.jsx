@@ -7,7 +7,7 @@ const Header = () => {
 	return (
 		<>
 			<div className="bg-[#003366] fixed w-full top-0 left-0 flex justify-between items-center px-[15px]">
-				<div className="flex flex-1">
+				<div className="flex flex-1 items-center">
 					<BiMenu className="text-[35px] mr-[20px] align-middle text-white" />
 					<img src={weaths} alt="logo" className="h-16 w-auto" />
 				</div>
@@ -17,8 +17,9 @@ const Header = () => {
 				<div className="text-right flex-1">
 					<input
 						type="text"
-						className="text-[16px] mr-[40px] text-white bg-tranparent w-[5px] h-[5px] p-[10px] border border-white shadow-lg rounded-xl relative focus:w-[250px]"
+						className="text-lg mr-10 text-white bg-transparent w-2 h-3 p-3 border-2 border-white rounded-full relative focus:w-1/4"
 					></input>
+                              <div className="w-1 h-3 absolute bg-white top-[40px] right-[52px] rotate-[135deg]"></div>
 				</div>
 			</div>
 		</>

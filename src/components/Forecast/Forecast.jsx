@@ -46,13 +46,13 @@ function getTheDay(date) {
 function Forecast(props) {
       const { data } = props;
       return (
-            <div className='flex flex-2 text-white py-[60px] w-full'>
+            <div className='flex text-white w-full py-16'>
                   {data.map((item) => {
                         const { temp_max, temp_min } = item.main;
                         return (
                               <div className='w-1/5 mx-[12px] rounded-md shadow-lg px-[12px] py-[10px] bg-white/10 flex flex-col justify-center' key={item.dt}>
-                                    <p className='font-bold text-[18px] py-5'>{spliteString(item.dt_txt)}</p>
-                                    <p className='font-bold text-[18px] py-5'>{getTheDay(item.dt_txt)}</p>
+                                    <p className='font-bold text-lg py-5'>{spliteString(item.dt_txt)}</p>
+                                    <p className='font-bold text-lg py-5'>{getTheDay(item.dt_txt)}</p>
                                     <div className='w-3/5 h-auto mx-auto py-5 flex justify-center'>
                                           <WeatherIcon icon={item.weather[0].icon} />
                                     </div>

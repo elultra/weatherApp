@@ -20,7 +20,7 @@ const Card = () => {
       }, [])
 
       return (
-            <div className='w-8/12 h-3/5 m-auto z-99 rounded-lg shadow-lg'>
+            <div className='w-8/12 m-auto z-99 bg-white/10 rounded-lg shadow-lg'>
                   <CardHeader />
                   {loading?
                         (
@@ -28,7 +28,7 @@ const Card = () => {
                                     <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
                               </div>
                         ) : (
-                              <div className='flex justify-between bg-sky-600 rounded-b-xl backdrop-opacity-10 z-5 shadow-lg'>
+                              <div className='flex justify-between rounded-b-xl z-5 shadow-lg'>
                                     <SocialMedia />
                                     <Forecast data={data} />
                               </div>

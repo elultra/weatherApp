@@ -1,6 +1,6 @@
 export default function SocialMedia(){
       return(
-            <div className='w-2/4 h-3/4 py-40 bg-sky-600 shadow-lg mr-2 my-10'>
+            <div className='w-2/4 h-[350px] bg-white/10 rounded-lg shadow-lg mr-2 mt-16'>
                   <p>twtter feeds</p>
                   <p>coming soon</p>
             </div>
