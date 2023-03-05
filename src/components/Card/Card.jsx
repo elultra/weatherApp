@@ -6,18 +6,18 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 import { useState, useEffect } from 'react';
 import { getWeathers } from '../../utils/api';
 
-const Card = () => {
+const Card = (props) => {
       const [loading, isLoading] = useState(false);
       const [data, setData] = useState([]);
       useEffect(() => {
             const getData = async () => {
                         isLoading(true);
-                        const weatherData = await getWeathers();
+                        const weatherData = await getWeathers(props.country);
                         setData(weatherData.data);
                         isLoading(false)
                   }
             getData();
-      }, [])
+      }, [props.country])
 
       return (
             <div className='w-8/12 m-auto z-99 bg-white/10 rounded-lg shadow-lg'>
