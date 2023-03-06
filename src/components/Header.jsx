@@ -9,7 +9,6 @@ const Header = (props) => {
             setInputValue(e.target.value)
             props.onChange(e.target.value)
       }
-      console.log(inputValue)
 	return (
 		<>
 			<div className="bg-[#003366] fixed w-full top-0 left-0 flex justify-between items-center px-[15px]">
