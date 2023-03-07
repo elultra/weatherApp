@@ -8,11 +8,15 @@ import { getWeathers } from "../../utils/api";
 
 const Card = (props) => {
 	const [loading, isLoading] = useState(false);
+      const [country, setCountry] = useState({});
 	const [data, setData] = useState([]);
 	useEffect(() => {
 		const getData = async () => {
 			isLoading(true);
 			const {data} = await getWeathers(props.country);
+                  const country = data.slice(-1)[0];
+                  data.pop();
+                  setCountry(country)
 			setData(data);
 			isLoading(false);
 		};
@@ -22,7 +26,7 @@ const Card = (props) => {
 		<div className="w-8/12 m-auto z-99 bg-white/10 rounded-lg shadow-lg">
 			{data.length > 0 ? (
 				<>
-					<CardHeader data={data} />
+					<CardHeader data={data} country={country}/>
 					<div className="flex justify-between rounded-b-xl z-5 shadow-lg">
 						<SocialMedia />
 						<Forecast data={data} />

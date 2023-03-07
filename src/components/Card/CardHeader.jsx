@@ -1,5 +1,6 @@
 function CardHeader(props) {
-	const { data } = props;
+	const { data, country } = props;
+      console.log(country)
 	return (
 		<div className="pt-20 pb-10 px-16 flex justify-between bg-[#003366] rounded-t-lg">
 			<div>
@@ -25,7 +26,7 @@ function CardHeader(props) {
 			</div>
 			<div className="flex flex-col justify-center self-start">
 				<p className="text-white text-3xl font-bold tracking-wider">
-					Sydney
+                              {props.country.country}
 				</p>
 				<hr className="w-full h-[2px] bg-white mt-0.5" />
 			</div>
