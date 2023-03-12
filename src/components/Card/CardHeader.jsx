@@ -2,7 +2,7 @@ function CardHeader(props) {
 	const { data, country } = props;
       console.log(country)
 	return (
-		<div className="pt-20 pb-10 px-16 flex justify-between bg-[#003366] rounded-t-lg">
+		<div className="pt-20 pb-10 px-16 flex justify-between bg-[#003366] rounded-t-lg xs:flex-col md:flex-row">
 			<div>
 				<div className="flex items-end pb-4">
 					<p className="text-6xl text-white font-semibold pr-6">
@@ -25,7 +25,7 @@ function CardHeader(props) {
 				</div>
 			</div>
 			<div className="flex flex-col justify-center self-start">
-				<p className="text-white text-3xl font-bold tracking-wider">
+				<p className="text-white text-3xl font-bold tracking-wider xs:pt-6 md:pt-0">
                               {props.country.country}
 				</p>
 				<hr className="w-full h-[2px] bg-white mt-0.5" />

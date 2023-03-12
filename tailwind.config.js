@@ -4,14 +4,17 @@ module.exports = {
       content: ["./src/**/*.{ts,tsx,js,jsx,html}"],
       theme: {
             screens: {
+                  xs:{
+                        min:'390px',
+                  },
                   sm: {
                         min: '640px',
                   },
-                  lg: {
-                        min: '1024px',
-                  },
                   md: {
                         min: '768px',
+                  },
+                  lg: {
+                        min: '1024px',
                   },
                   xl: {
                         min: '1280px',

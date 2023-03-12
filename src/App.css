@@ -5,12 +5,6 @@
 }
 
 .App {
-      text-align: center;
       background: linear-gradient(0deg, #d146fe 20%, #8650f6 80%);
-      min-width: 800px;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+
 }
