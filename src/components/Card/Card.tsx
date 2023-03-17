@@ -1,32 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CardHeader from "./CardHeader";
 import "./loadingAnimation.css";
 import Forecast from "../Forecast/Forecast";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { useState, useEffect } from "react";
 import { getWeathers } from "../../utils/api";
 
-const Card = (props) => {
-	const [loading, isLoading] = useState(false);
-	const [country, setCountry] = useState({});
+const Card = ({ country: selectedCountry }: any) => {
+	const [loading, setLoading] = useState(false);
+	const [countryData, setCountryData] = useState<any>({country: ''});
 	const [data, setData] = useState([]);
 	useEffect(() => {
 		const getData = async () => {
-			isLoading(true);
-			const { data } = await getWeathers(props.country);
-			const country = data.slice(-1)[0];
-			data.pop();
-			setCountry(country);
-			setData(data);
-			isLoading(false);
+			try {
+				setLoading(true);
+				const { data } = await getWeathers(selectedCountry);
+				const displayCountry = data?.slice?.(-1)?.[0];
+				const forecastData = data?.slice?.(0, -1);
+				setCountryData(displayCountry);
+				setData(forecastData);
+				setLoading(false);
+			} catch (err) {
+				console.log(err);
+			} finally {
+				setLoading(false);
+			}
 		};
 		getData();
-	}, [props.country]);
+	}, [selectedCountry]);
 	return (
 		<>
-			{data.length > 0 ? (
+			{data.length > 0 && !loading ? (
 				<>
-					<CardHeader data={data} country={country} />
+					<CardHeader data={data} countryData={countryData} />
 					<div className="flex justify-between rounded-b-xl shadow-lg w-full overflow-hidden xs:flex-col lg:flex-row px-4">
 						<SocialMedia />
 						<Forecast data={data} />

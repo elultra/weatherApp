@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import Clock from "./Clock/Clock";
-import weaths from "../images/weaths.png";
-
-const Header = (props) => {
+import Logo from "../images/weaths.png"
+export interface HeaderProps{
+      onChange: (val:string) => void;
+}
+const Header = ({onChange}:HeaderProps) => {
 	const [inputValue, setInputValue] = useState("");
-	const handleChange = (e) => {
+	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		setInputValue(e.target.value);
-		props.onChange(e.target.value);
+		onChange(e.target.value);
 	};
 	return (
 		<>
@@ -15,7 +17,7 @@ const Header = (props) => {
 				<div className=" flex justify-between items-center px-[15px]">
 					<div className="flex flex-1 items-center">
 						<BiMenu className="text-[35px] mr-[20px] align-middle text-white hidden md:inline-block" />
-						<img src={weaths} alt="logo" className="h-16 w-auto" />
+						<img src={Logo} alt="logo" className="h-16 w-auto" />
 					</div>
 					<div className="text-white flex-1 xs:hidden md:inline-block">
 						<Clock />
