@@ -29,19 +29,19 @@ function Forecast({ data }: any) {
                         className="w-1/5 rounded shadow px-[12px] py-[10px] bg-white/10 mx-1 flex-col justify-center xs:flex-row xs:w-full xs:my-2 xs:gap-1 lg:flex-col lg:w-1/5 h-[320px]"
                         key={dt}
                     >
-                        <p className="font-bold text-lg py-5 xs:my-auto xs:px-2">
+                        <p className="font-bold text-lg pt-5 xs:my-auto xs:px-2">
                             {formatDate}
                         </p>
-                        <p className="font-bold text-lg pb-5 xs: my-auto">
+                        <p className="font-bold text-lg pt-2 pb-8 xs: my-auto">
                             {formatDay}
                         </p>
                         <div className="w-3/5 h-auto mx-auto flex justify-center xs:w-2/5">
                             <WeatherIcon icon={weather[0].icon} />
                         </div>
-                        <p className="xs:self-center font-bold xs:px-2 pb-5">
+                        <p className="xs:self-center pt-2 font-bold xs:px-2 pb-8">
                             {weather[0].description}
                         </p>
-                        <p className="py-5 text-2xl font-bold xs:my-auto xs:px-2">
+                        <p className="pb-5 text-2xl font-bold xs:my-auto xs:px-2">
                             {Math.round(temp)}&#8451;
                         </p>
                     </div>
