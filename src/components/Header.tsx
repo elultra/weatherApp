@@ -18,7 +18,7 @@ const Header = ({ onChange }: HeaderProps) => {
             <div className="bg-[#003366] block w-full">
                 <div className="flex justify-between items-center px-[15px]">
                     <div className="flex flex-1 items-center">
-                        <BiMenu className="text-[35px] mr-[20px] align-middle text-white hidden md:inline-block" />
+                        <BiMenu className="text-[35px] mr-10 align-middle text-white hidden md:inline-block" />
                         <img src={Logo} alt="logo" className="h-16 w-auto" />
                     </div>
                     <div className="text-white justify-center xs:hidden md:inline-block">
