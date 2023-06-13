@@ -44,7 +44,7 @@ export interface cardHeaderProps {
 function CardHeader({ data, countryData }: cardHeaderProps) {
     const { main, wind, weather } = data[0];
     return (
-        <div className="pt-20 pb-10 px-16 flex justify-between bg-[#003366] rounded-t-lg xs:flex-col md:flex-row">
+        <div className="py-10 px-16 flex justify-between bg-[#003366] rounded-t-lg xs:flex-col md:flex-row">
             <div>
                 <h1 className="text-6xl text-white font-semibold pb-6">
                     {`${Math.round(main.temp)} °C`}

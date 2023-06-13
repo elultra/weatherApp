@@ -19,10 +19,16 @@ const Header = ({ onChange }: HeaderProps) => {
                 <div className="flex justify-between items-center px-[15px]">
                     <div className="flex flex-1 items-center">
                         <BiMenu className="text-[35px] mr-10 align-middle text-white hidden md:inline-block" />
-                        <img src={Logo} alt="logo" className="h-16 w-auto" />
+                        <a href="./">
+                            <img
+                                src={Logo}
+                                alt="logo"
+                                className="h-16 w-auto"
+                            />
+                        </a>
                     </div>
                     <div className="text-white justify-center xs:hidden md:inline-block">
-                        <h3 className="font-semibold text-xl">{`${formatDate} ${formatDay}`}</h3>
+                        <h3 className="font-semibold text-xl cursor-default">{`${formatDate} ${formatDay}`}</h3>
                     </div>
                     <div className="text-right flex-1">
                         <input
